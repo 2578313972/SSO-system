@@ -1,0 +1,30 @@
+{
+  "name": "sso-system-server",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "initMysql": "node initMysql",
+    "dev": "concurrently \"npx nodemon src/app.ts \"",
+    "build": "concurrently \" npm run initMysql \" \" tsc \""
+  },
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.13.1",
+    "koa-bodyparser": "^4.3.0",
+    "koa-router": "^10.0.0",
+    "koa2-cors": "^2.0.6",
+    "log4js": "^6.3.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.2",
+    "@types/koa": "^2.13.3",
+    "@types/koa-bodyparser": "^4.3.1",
+    "@types/koa-router": "^7.4.2",
+    "@types/koa2-cors": "^2.0.1",
+    "@types/mysql": "^2.15.18",
+    "concurrently": "^6.2.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.4"
+  }
+}
